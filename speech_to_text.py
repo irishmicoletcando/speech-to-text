@@ -15,3 +15,5 @@ def main():
         # converting the audio to text file
         try:
             print("You said: \n " + recognizer.recognize_google(audio))
+        except Exception as error:
+            print(f"Error: {error}")
