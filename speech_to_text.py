@@ -11,12 +11,14 @@ def main():
 
         # listening to the source
         audio = recognizer.listen(source)
+        print("Recognizing the speech now...")
 
-        # converting the audio to text file
+        # converting the audio to text file using Google
         try:
             print("You said: \n " + recognizer.recognize_google(audio))
         except Exception as error:
             print(f"Error: {error}")
 
-    if __name__ == '__main__':
-        main()
+
+if __name__ == '__main__':
+    main()
