@@ -19,7 +19,7 @@ def main():
             print("You said: \n " + recognizer.recognize_google(audio))
             print("Audio recorded successfully!")
         except Exception as error:
-            print(f"Error: {error}")
+            print("Error: " + str(error))
 
 
 if __name__ == '__main__':
