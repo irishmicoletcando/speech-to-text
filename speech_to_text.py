@@ -14,4 +14,4 @@ def main():
 
         # converting the audio to text file
         try:
-            print("You said: ")
+            print("You said: \n " + recognizer.recognize_google(audio))
