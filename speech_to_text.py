@@ -17,10 +17,11 @@ def main():
         # converting the audio to text file using Google
         try:
             print("You said: \n " + recognizer.recognize_google(audio))
-            print("Audio recorded successfully!")
         except Exception as error:
             print("Error.")
 
 
 if __name__ == '__main__':
     main()
+
+# Credits: https://www.youtube.com/watch?v=GluSLXFGfJ8
