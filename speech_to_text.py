@@ -1,11 +1,12 @@
 # importing needed packages
 import speech_recognition as speech_recog
 
+
 def main():
     # initialize the recognizer
     recognizer = speech_recog.Recognizer()
     # source of audio - microphone
-    with speech_recog.Microphone as source:
+    with speech_recog.Microphone() as source:
         recognizer.adjust_for_ambient_noise(source)
         print("Say something...")
 
@@ -16,6 +17,7 @@ def main():
         # converting the audio to text file using Google
         try:
             print("You said: \n " + recognizer.recognize_google(audio))
+            print("Audio recorded successfully!")
         except Exception as error:
             print(f"Error: {error}")
 
